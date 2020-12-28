@@ -18,6 +18,7 @@ Module.register("MMM-HNB-Exchange", {
         currency: [],
         fadePoint: 0.2,
         fade: true,
+	mode: "carousel",   
     },
 
     start: function () {
