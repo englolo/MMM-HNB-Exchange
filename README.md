@@ -29,7 +29,7 @@ Add the following data to your config.js file
 | Option | Default | Description |
 |:--:|:-:|:--:|
 | ```decimal:```| ```6``` | Set number of decimal places  |
-| ```currency:```| ```[]```| Define the download currency, if left out or empty <br />all currency will be taken.<br /> option: ['GBP','USD','EUR','BAM','AUD','CAD','CZK','DKK','HUF','JPY','NOK','SEK','CHF','PLN']|
+| ```currency:```| ```[]```| Define the download currency, if left out or empty <br />all currency will be taken.<br /> option:<br /> ['GBP','USD','EUR','BAM','AUD','CAD','CZK','DKK','HUF','JPY','NOK','SEK','CHF','PLN']|
 | ``` mode:```| ```"carousel"```|Define style between ```"carousel"``` or ```"table"```  |
 | ```rotateInterval: ```|```10 * 1000```|Set rotate interval for  ``` mode:"carousel"```, ```10 * 1000```- 10s|
 | ```updateInterval: ```|```5 * 60 * 1000```|Set update interval to fetch new API, ```5 * 60 * 1000```-5hr |
