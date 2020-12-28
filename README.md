@@ -16,7 +16,7 @@ git clone https://github.com/englolo/MMM-HNB-Exchange.git
 Add the following data to your config.js file
 ```
 {
-    module: "MMM-HNB'Exchange",
+    module: "MMM-HNB-Exchange",
     position: "top_right",
     config: {
         decimal: 2, //
