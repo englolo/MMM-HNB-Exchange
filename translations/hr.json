@@ -1,0 +1,8 @@
+{
+    "HNB_EXCHANGE_RATES" : "HNB Tečajna lista",
+    "BUYING_RATE" : "Kupovni tečaj",
+	"MIDDLE_RATE" : "Srednji tečaj",
+	"SELLING_RATE" : "Prodajni tečaj",
+	"FOR": "za ",
+	"LOADING": "učitavanje..."
+}
