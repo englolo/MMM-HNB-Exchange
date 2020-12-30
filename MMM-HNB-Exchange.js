@@ -13,7 +13,7 @@ Module.register("MMM-HNB-Exchange", {
         rotateInterval: 10 * 1000,
         initialLoadDelay: 4250,
         animationSpeed: 3000,
-        updateInterval: 5 * 60 * 1000,  //6 * 60 * 60 * 1000   =6h
+        updateInterval: 5  * 60 * 60 * 1000,  //6 * 60 * 60 * 1000   =6h
         url: "http://api.hnb.hr/tecajn/v2",
         currency: [],
         fadePoint: 0.2,
