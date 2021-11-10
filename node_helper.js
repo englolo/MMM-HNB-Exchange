@@ -5,7 +5,7 @@
  * MIT Licensed.
  */
 const NodeHelper = require('node_helper');
-const request = require('request');
+const fetch = require('node-fetch');
 var self;
 
 
@@ -24,18 +24,22 @@ module.exports = NodeHelper.create({
 		else {
 		var url = self.config.url+ self.getCurrency(); 	
 		}
-		request({
-            url: url,
-            method: 'GET'
-            }, (error, response, body) => {
-			    if (!error && response.statusCode == 200) {
-				    var result = JSON.parse(body);
-				
-				console.log(response.statusCode + result);
-					self.sendSocketNotification('HNB_RESULT', result);		
-			}
-		});
-	},
+		fetch(url)
+		.then(res => {
+            if (!res.ok) {
+                throw Error(res.statusText);
+            }
+			console.log(res.status);
+            return res.json();
+        })
+        .then(result => {
+            result.sort((a, b) => {
+                return self.config.currency.indexOf(a.valuta) - self.config.currency.indexOf(b.valuta);
+            })
+            self.sendSocketNotification('HNB_RESULT', result);
+        })
+        .catch(error => console.error(`${this.name} ${error.code} ${url}`))
+    },
     
 	getCurrency: function() {
      var currency =self.config.currency.map(function(ele) {
