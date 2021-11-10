@@ -11,6 +11,7 @@ Clone this repository into the MagicMirror Modules folder:
 ```
 cd ~/MagicMirror/modules
 git clone https://github.com/englolo/MMM-HNB-Exchange.git
+npm install
 ```
 ## Configuration
 Add the following data to your config.js file
@@ -35,3 +36,7 @@ Add the following data to your config.js file
 | ```updateInterval:```|```5 * 60 * 60 * 1000```|Set update interval to fetch new API, ```5 * 60 * 60 * 1000```-5hr |
 | ```animationSpeed:```|``` 3000```|Set animation speed for  ``` mode:"carousel"```, ```3000```- 3s|
 | ```fade:```|``` true```|Set fade in ```true``` or ```false``` for  ``` mode:"table"```|
+
+## Change log
+10.11.2021.  v.1.0.1 
+- replaced deprecated "request" with "node-fetch" 
